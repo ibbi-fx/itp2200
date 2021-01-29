@@ -20,7 +20,8 @@ public class PatternMatcher {
                     if (subject[iSub + iPat] != pattern[iPat]) {
                         rtnIndex = NOTFOUND; isPat = false;
                         break; // out of for loop
-                    } }
+                    }
+                }
             }
             iSub ++; }
         return (rtnIndex); }

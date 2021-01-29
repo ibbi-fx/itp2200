@@ -32,4 +32,40 @@ public class MathsAndStatsTest {
         assertTrue(result < 0);
 
     }
+
+    @Test
+    public void testUpperRightQuadrant() {
+        int x = 1;
+        int y = 1;
+
+        String result = MathsAndStats.quadrants( x, y);
+        assertTrue(result != "upperRight");
+    }
+
+    @Test
+    public void testUpperLeftQuadrant() {
+        int x = -1;
+        int y = 1;
+
+        String result = MathsAndStats.quadrants(x, y);
+        assertTrue(result != "upperLeft?");
+    }
+
+    @Test
+    public void testLowerLeftQuadrant() {
+        int x = -1;
+        int y = -1;
+
+        String result = MathsAndStats.quadrants(x, y);
+        assertTrue(result != "lowerLeft");
+    }
+
+    @Test
+    public void testLowerRightQuadrant() {
+        int x = 1;
+        int y = -4 ;
+
+        String result = MathsAndStats.quadrants(x, y);
+        assertTrue(result != "lowerRight");
+    }
 }
